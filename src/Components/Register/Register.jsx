@@ -90,12 +90,18 @@ export default function Register() {
       {/* <Helmet>
         <title>Hello World</title>
       </Helmet> */}
-      <div className="border-2 border-gray-400 rounded-3xl p-6 my-12 max-w-4xl mx-auto">
-        <form className="w-full" onSubmit={handleSubmit(handleRegister)}>
+      <div className="border-2 border-gray-400 rounded-3xl p-6 my-12 max-w-4xl mx-auto form-style">
+        <form
+          className="w-full form-style"
+          onSubmit={handleSubmit(handleRegister)}
+        >
           {/* {successMsg && <div className="messageGreen">{successMsg}</div>}
         {successMsg && <p>{errorMsg}</p>} */}
           <div className="mb-5">
-            <label htmlFor="name" className="block mb-2.5 text-sm font-medium ">
+            <label
+              htmlFor="name"
+              className="name-in block mb-2.5 text-sm font-medium "
+            >
               Name
             </label>
             <input
@@ -115,7 +121,7 @@ export default function Register() {
           <div className="mb-5">
             <label
               htmlFor="email"
-              className="block mb-2.5 text-sm font-medium "
+              className="name-in block mb-2.5 text-sm font-medium "
             >
               Your email
             </label>
@@ -134,7 +140,7 @@ export default function Register() {
           <div className="mb-5">
             <label
               htmlFor="password"
-              className="block mb-2.5 text-sm font-medium "
+              className="name-in block mb-2.5 text-sm font-medium "
             >
               Your password
             </label>
@@ -153,7 +159,7 @@ export default function Register() {
           <div className="mb-5">
             <label
               htmlFor="confirmPassword"
-              className="block mb-2.5 text-sm font-medium "
+              className=" name-in block mb-2.5 text-sm font-medium "
             >
               Confirm Your Password
             </label>
@@ -173,7 +179,7 @@ export default function Register() {
           <button
             type="submit"
             disabled={isLoading}
-            className={`text-white  ${isLoading ? "btn-disabled" : ""} bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none block w-full flex justify-center items-center gap-2`}
+            className={` btn-in text-white  ${isLoading ? "btn-disabled" : ""} bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none block w-full flex justify-center items-center gap-2`}
           >
             {isLoading ? (
               <>

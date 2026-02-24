@@ -17,23 +17,23 @@ export default function Navbar() {
   }
   return (
     <>
-      <nav className="bg-neutral-primary  w-full z-20 top-0 start-0 border-b border-default  mb-8">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <nav className="bg-neutral-primary  w-full z-20 top-0 start-0   nav-bar">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 ">
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <span className="self-center text-xl text-heading font-semibold whitespace-nowrap">
-              <i className="fas fa-home"></i> To Do
+            <span className="self-center text-xl text-heading font-semibold whitespace-nowrap main">
+              <i className="fas fa-home main"></i> To Do
             </span>
           </Link>
-          <div className="flex items-center gap-8" id="navbar-user">
-            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <div className="flex items-center gap-8" id="navbar-user ">
+            <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0">
               {user.token && (
-                <li>
+                <li className="">
                   <Link
                     to="/"
-                    className="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                    className="main block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
                     aria-current="page"
                   >
                     Home
@@ -41,30 +41,30 @@ export default function Navbar() {
                 </li>
               )}
               {user.token && (
-                <li>
+                <li className="">
                   <Link
                     to="profile"
-                    className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                    className="main block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                   >
                     Profile
                   </Link>
                 </li>
               )}
               {!user.token && (
-                <li>
+                <li className="">
                   <Link
                     to="login"
-                    className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                    className=" main block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                   >
                     Login
                   </Link>
                 </li>
               )}
               {!user.token && (
-                <li>
+                <li className="">
                   <Link
                     to="register"
-                    className="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                    className="main  block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                   >
                     Register
                   </Link>

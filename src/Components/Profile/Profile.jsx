@@ -1,7 +1,16 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
+
+import { UserContext } from "../Context/UserContextProvider";
 
 export default function Profile() {
-  let nav = useNavigate();
-  return <div>prof</div>;
+  let { user } = useContext(UserContext);
+  // console.log("i", user);
+  console.log(user);
+
+  return (
+    <div className="welcome-container">
+      <h1 className="welcome-title">Welcome, {user?.name}!</h1>
+      <p className="welcome-title">Here is Your To Do App 😄</p>
+    </div>
+  );
 }

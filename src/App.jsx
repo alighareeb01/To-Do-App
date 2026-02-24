@@ -46,12 +46,12 @@ function App() {
   ]);
 
   return (
-    <>
+    <div className="page-dark">
       <UserContextProvider>
         <RouterProvider router={routes}></RouterProvider>
         <Toaster />
       </UserContextProvider>
-    </>
+    </div>
   );
 }
 

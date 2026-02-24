@@ -212,9 +212,9 @@ export default function Home() {
         {user.token ? (
           <>
             {/* Create Todo Form */}
-            <div className="container mx-auto p-5 m-5">
+            <div className="container mx-auto p-5 m-5 form-style ">
               <form
-                className="max-w-sm mx-auto"
+                className="form-style w-full"
                 onSubmit={
                   updateTask
                     ? handleSubmit2(handleUpdate)
@@ -224,7 +224,7 @@ export default function Home() {
                 <div className="mb-5">
                   <label
                     htmlFor="title"
-                    className="block mb-2.5 text-sm font-medium text-heading"
+                    className="name-in block mb-2.5 text-sm font-medium text-heading"
                   >
                     title
                   </label>
@@ -246,7 +246,7 @@ export default function Home() {
 
                 <label
                   htmlFor="message"
-                  className="block mb-2.5 text-sm font-medium text-heading"
+                  className="name-in block mb-2.5 text-sm font-medium text-heading"
                 >
                   Your message
                 </label>
@@ -268,13 +268,13 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`text-white  ${
+                  className={`text-white ${
                     isLoading ? "btn-disabled" : ""
-                  } bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none block w-full flex justify-center items-center gap-2`}
+                  }btn-in shadow-xs font-medium rounded-base text-sm px-4 py-2.5 block w-full flex justify-center items-center gap-2`}
                 >
                   {isLoading ? (
                     <>
-                      Adding <i className="fa fa-spinner fa-spin"></i>
+                      Adding<i className="fa fa-spinner fa-spin"></i>
                     </>
                   ) : (
                     "Add"
@@ -284,22 +284,28 @@ export default function Home() {
             </div>
 
             {/* Todos Grid */}
-            <div className="grid grid-cols-4 gap-6 mt-10">
+            <div className="grid grid-cols-4 gap-1 mt-10 tasks">
+             
+              
               {toDos.length > 0 ? (
                 toDos.map((todo) => (
+                  
                   <div
                     key={todo._id}
-                    className="border border-default rounded-lg p-4 shadow hover:shadow-lg transition"
+                    className="border border-default rounded-lg p-4 shadow hover:shadow-lg transition form-style"
                   >
-                    <h2 className="text-lg font-semibold mb-2">{todo.title}</h2>
-                    <p className="text-body">{todo.description}</p>
-                    <div className="btns flex justify-center gap-5 mt-3">
+
+                    <h2 className="main text-lg font-semibold mb-2">
+                      {todo.title}
+                    </h2>
+                    <p className="main text-body">{todo.description}</p>
+                    <div className="btns flex justify-center gap-5 mt-3  item">
                       <button
                         onClick={() => {
                           handleDelete(todo._id);
                         }}
                         type="button"
-                        className="text-white bg-brand px-4 py-2 rounded hover:bg-brand-strong"
+                        className="btn-in text-white bg-brand px-4 py-2 rounded hover:bg-brand-strong"
                       >
                         Delete
                       </button>
@@ -310,7 +316,7 @@ export default function Home() {
                           // handleUpdate(todo);
                         }}
                         type="button"
-                        className="text-white bg-brand px-4 py-2 rounded hover:bg-brand-strong"
+                        className="btn-in text-white bg-brand px-4 py-2 rounded hover:bg-brand-strong"
                       >
                         Update
                       </button>
