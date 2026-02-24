@@ -17,22 +17,20 @@ body {
 .mymodal {
   margin-top: 800px;
 }
-.nav-bar{
+.nav-bar {
   /* background-color:var(--color-fuchsia-600); */
   background-color: rgba(192, 38, 211, 0.25);
   /* background-color: oklch(59.1% 0.293 322.896); */
   /* background-color: #0a0a0a; */
 
   /* padding: 0 20px; */
-  
 }
 
-.main{
+.main {
   color: white;
- 
 }
-.form-style{
-    background-color: rgba(192, 38, 211, 0.25);
+.form-style {
+  background-color: rgba(192, 38, 211, 0.25);
   max-width: 420px;
   margin: auto;
   margin-top: 25px;
@@ -51,10 +49,10 @@ body {
   cursor: pointer;
 }
 
-.name-in{
- width: 100%;
+.name-in {
+  width: 100%;
   padding: 12px;
-  color :white;
+  color: white;
 }
 .page-dark {
   background-color: #0a0a0a;
@@ -64,13 +62,30 @@ body {
 .form-style button:hover {
   opacity: 0.9;
 }
-.tasks{
+.tasks {
   margin-top: 10px;
 }
-.tasksTop{
+.tasksTop {
   margin-top: 10px;
   color: white;
-  text-align: center
+  text-align: center;
+}
+.welcome-title {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: rgba(239, 9, 255, 0.573);
+}
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 0 20px;
+  background-color: #0a0a0a;
 }
 /* .welcome-container {
   display: flex;
